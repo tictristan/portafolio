@@ -1,17 +1,57 @@
 .about{
     padding: 100px 8%;
-    background: #111;
+    background: #0b0b0b;
+    color: #fff;
     text-align: center;
 }
 
-.about h2{
-    color: #ff1e1e;
+.about__container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about__title{
     font-size: 2rem;
+    color: #ff1e1e;
     margin-bottom: 20px;
 }
 
-.about p{
-    color: #aaa;
-    max-width: 600px;
-    margin: 0 auto;
+.about__text{
+    color: #9ca3af;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* STATS */
+.about__stats{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat{
+    background: #111;
+    border: 1px solid rgba(255,30,30,0.2);
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 140px;
+    transition: 0.3s;
+}
+
+.stat:hover{
+    transform: translateY(-5px);
+    border-color: #ff1e1e;
+}
+
+.stat__title{
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.stat__subtitle{
+    color: #9ca3af;
+    font-size: 0.85rem;
 }

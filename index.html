@@ -2,20 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Portafolio de Tristan Ruelas, desarrollador de software especializado en frontend, Angular, PHP, Kotlin y aplicaciones multiplataforma.">
+    <meta name="keywords" content="Frontend, Angular, PHP, Laravel, Kotlin, Android, Portfolio">
+    <meta name="author" content="Tristan Ruelas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/hero.css">
     <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/projects.css">
+    <link rel="stylesheet" href="CSS/modal.css">
+    <link rel="stylesheet" href="CSS/line.css">
+    <link rel="stylesheet" href="CSS/tecnologías.css">
+    <link rel="stylesheet" href="CSS/footer.css">
 
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <script src="JS/main.js" defer></script>
+    <script src="JS/modal.js" defer></script>
+
 
     <title>Portafolio</title>
 
 </head>
 <body>
+
+    <!-- NAVBAR -->
 
     <nav class="nav">
 
@@ -23,25 +38,31 @@
 
         <ul class="nav__menu">
             <li class="nav__item">
-                <a class="nav__link" href="#">Inicio</a>
+                <a class="nav__link" href="#"><i class="fa-solid fa-house"></i> Inicio</a>
             </li>
 
             <li class="nav__item">
-                <a class="nav__link" href="#about">Acerca de mí</a>
+                <a class="nav__link" href="#about"><i class="fa-solid fa-circle-user"></i> Acerca de mí</a>
             </li>
 
             <li class="nav__item">
-                <a class="nav__link" href="#proyectos">Proyectos</a>
+                <a class="nav__link" href="#proyectos"><i class="fa-solid fa-code"></i> Proyectos</a>
             </li>
 
             <li class="nav__item">
-                <a class="nav__link" href="#contacto">Contacto</a>
+                <a class="nav__link" href="#trayectoria"><i class="fa-solid fa-timeline"></i> Trayectoria</a>
+            </li>
+
+             <li class="nav__item">
+                <a class="nav__link" href="#tecnologias"><i class="fa-solid fa-diagram-project"></i> Tecnologias</a>
             </li>
         </ul>
 
         <button class="nav__btn">☰</button>
 
     </nav>
+
+    <!-- HERO -->
 
     <section class="hero" id="inicio">
 
@@ -52,7 +73,8 @@
             </h1>
 
             <p class="hero__subtitle">
-                Desarrollador Frontend en formación
+                Desarrollador Frontend enfocado en crear interfaces modernas,
+    funcionales y experiencias de usuario eficientes.
             </p>
 
             <div class="hero__buttons">
@@ -64,16 +86,46 @@
 
     </section>
 
-    <section class="about" id="about">
-        
-        <h2>Sobre mí</h2>
+    <!--ABOUT ME-->
 
-        <p>
-            Soy un desarrollador en formación enfocado en crear interfaces modernas,
-            responsivas y con buen diseño.
-        </p>
+    <section class="about" id="about">
+
+        <div class="about__container">
+
+            <h2 class="about__title">Sobre mí</h2>
+
+            <p class="about__text">
+                Soy un desarrollador en formación enfocado en crear interfaces modernas,
+                responsivas y con buen diseño. Me gusta construir proyectos funcionales
+                y mejorar constantemente mis habilidades en desarrollo web.
+            </p>
+
+            <div class="about__stats">
+
+                <div class="stat">
+                    <h3 class="stat__title">+4</h3>
+                    <p class="subtitle">Proyectos</p>
+                </div>
+
+                <div class="stat">
+                    <h3 class="stat__title">+2</h3>
+                    <p class="subtitle">Años aprendiendo</p>
+                </div>
+
+                <div class="stat">
+                    <h3 class="stat__title">Frontend</h3>
+                    <p class="stat__subtitle">Enfoque principal</p>
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
+
+
+    <!-- PROJECTS -->    
+
 
     <section class="projects" id="proyectos">
 
@@ -85,10 +137,10 @@
 
                 <div class="project-card__img" style="background-image: url(img/PWA.png);"></div>
 
-                <h3>Landing Page</h3>
+                <h3>El Paso de Los Arrieros </h3>
 
                 <p>
-                    PWA - El Paso de los.
+                    Progressive Web App desarrollada como complemento oficial del videojuego 'El Paso de los Arrieros'.
                 </p>
 
                 <div class="project-card__tech">
@@ -99,7 +151,22 @@
 
                 <div class="project-card__links">
                     <a href="https://pwa-arrieros.web.app/" target="_blank">Demo</a>
-                    <a href="#">Detalles</a>
+                    <div class="project-card__links">
+                    <a href="#"
+                    class="details-btn"
+
+                    data-title="El Paso de los Arrieros - Progressive Web App"
+                    data-description="Progressive Web App desarrollada como complemento oficial del videojuego 'El Paso de los Arrieros'. La aplicación permite explorar la historia, personajes, enemigos, reinos, recompensas y mecánicas del juego, además de instalar la experiencia como una aplicación nativa y descargar el APK para Android."
+                    data-problem="El videojuego necesitaba una plataforma accesible desde cualquier dispositivo que permitiera presentar su universo narrativo, facilitar la distribución del APK y ofrecer una experiencia moderna con funcionamiento offline e instalación como aplicación."
+                    data-solution="Se desarrolló una PWA utilizando Angular 19 y Tailwind CSS bajo una arquitectura App Shell. Se implementó navegación mediante Angular Router, Service Worker para funcionamiento offline, Manifest para instalabilidad, caché de recursos, diseño responsive y una sección dedicada a la descarga del APK mediante enlace y código QR."
+                    data-role="Diseño y desarrollo del Frontend de la Progressive Web App, implementación de Angular Router, Service Worker, Manifest, diseño responsive, optimización de la experiencia de usuario y despliegue en Firebase Hosting."
+                    data-img="img/PWA.png"
+                    data-tech="Angular 19,TypeScript,Tailwind CSS,Angular Router,Service Worker,Manifest Web App,Firebase Hosting,PWA,Responsive Design">
+
+                        Detalles
+
+                    </a>
+                </div>
                 </div>
 
             </div>
@@ -107,9 +174,10 @@
             <div class="project-card">
                 <div class="project-card__img" style="background-image: url(img/ARCMEX.png);"></div>
 
-                <h3>To Do App</h3>
+                <h3>ARCMEX</h3>
 
-                <p>Sistema de Control ARCMEX.</p>
+                <p>Sistema web empresarial desarrollado durante mi periodo de estadías para centralizar
+la gestión documental, inventario, ventas y administración de usuarios.</p>
 
                 <div class="project-card__tech">
                     <span class="tag--html">HTML</span>
@@ -118,10 +186,21 @@
                     <span class="tag--php">PHP</span>
                     <span class="tag--bootstrap">Bootstrap</span>
                     <span class="project-tag">Estadías</span>
+                    <span class="project-tag"></span>
                 </div>
 
                 <div class="project-card__links">
-                    <a href="#">Ver documentación</a>
+                    <a href="#"
+                    class="details-btn"
+                    data-title="Sistema de Gestión Empresarial ARCMEX"
+                    data-description="Proyecto desarrollado durante mi periodo de estadías profesionales para ARCMEX, enfocado en digitalizar y centralizar los procesos internos de la empresa."
+                    data-problem="La empresa requería una plataforma que permitiera administrar documentos, inventario, ventas y usuarios desde un único sistema."
+                    data-solution="Se desarrolló una aplicación web modular con autenticación, control de permisos por rol, gestión documental, inventario, ventas, auditoría y administración de usuarios."
+                    data-role="Diseño UX/UI, desarrollo Frontend, diseño responsive, creación de wireframes e integración con PHP."
+                    data-img="img/ARCMEX.png"
+                    data-tech="HTML,CSS,JavaScript,PHP,Bootstrap,MySQL">
+                        Detalles
+                    </a>
                 </div>
             </div>
 
@@ -132,7 +211,7 @@
                 <h3>ACIDNAY</h3>
 
                 <p>
-                    Página moderna con HTML, CSS y JS.
+                    Proyecto desarrollado durante mi segunda estadía profesional para el Gobierno del Estado de Nayarit.
                 </p>
 
                 <div class="project-card__tech">
@@ -146,54 +225,53 @@
                 </div>
 
                 <div class="project-card__links">
-                    <a href="#">GitHub</a>
-                    <a href="#">Demo</a>
+                    <a href="#"
+                    class="details-btn"
+
+                    data-title="ACIDNAY - Sistema de Firma Electrónica Avanzada"
+
+                    data-description="Proyecto desarrollado durante mi segunda estadía profesional para el Gobierno del Estado de Nayarit. Participé en el desarrollo del Frontend de una plataforma para la gestión de certificados digitales, firma electrónica avanzada, permisos, dictámenes y administración de usuarios, priorizando una experiencia de usuario intuitiva, accesible y adaptable."
+
+                    data-problem="El sistema requería una interfaz moderna que permitiera administrar certificados digitales, usuarios, permisos y documentos de forma centralizada, garantizando una navegación intuitiva, control por roles, accesibilidad y comunicación constante con los servicios del backend." 
+
+                    data-solution="Se diseñó e implementó una aplicación web responsive utilizando Scrum como metodología de desarrollo. Se construyeron wireframes, flujos de navegación, interfaces para múltiples módulos, formularios complejos, modales, validaciones, consumo de APIs y una experiencia consistente para los distintos tipos de usuarios del sistema."
+
+                    data-role="Desarrollo Frontend completo, diseño UX/UI, creación de wireframes, diseño de interfaces, implementación responsive, integración con APIs del backend, validaciones de formularios y mejora continua de la experiencia de usuario durante cada Sprint."
+
+                    data-img="img/ACIDNAY.png"
+
+                    data-tech="HTML,CSS,JavaScript,jQuery,Bootstrap,PHP,TCPDF,REST API,Scrum,Balsamiq,Responsive Design"
+
+                    data-demo="#"
+
+                    data-github="#">
+
+                        Detalles
+
+                    </a>
                 </div>
 
             </div>
 
             <div class="project-card">
 
-                <div class="project-card__img"></div>
+                <div class="project-card__img" style="background-image: url(img/portafolio.png);"></div>
 
-                <h3>Landing Page</h3>
+                <h3>Portafolio Personal</h3>
 
                 <p>
-                    Página moderna con HTML, CSS y JS.
+                    Sitio web donde presento mis proyectos, habilidades y experiencia como desarrollador.
+                    Diseñado y desarrollado desde cero con HTML, CSS y JavaScript.
                 </p>
 
                 <div class="project-card__tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JS</span>
+                    <span class="tag--html">HTML</span>
+                    <span class="tag--css">CSS</span>
+                    <span class="tag--js">JS</span>
                 </div>
 
                 <div class="project-card__links">
-                    <a href="#">GitHub</a>
-                    <a href="#">Demo</a>
-                </div>
-
-            </div>
-
-            <div class="project-card">
-
-                <div class="project-card__img"></div>
-
-                <h3>Landing Page</h3>
-
-                <p>
-                    Página moderna con HTML, CSS y JS.
-                </p>
-
-                <div class="project-card__tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JS</span>
-                </div>
-
-                <div class="project-card__links">
-                    <a href="#">GitHub</a>
-                    <a href="#">Demo</a>
+                    <a href="https://github.com/tictristan/portafolio">GitHub</a>
                 </div>
 
             </div>
@@ -201,6 +279,367 @@
         </div>
 
     </section>
+
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+
+            <img id="modal-img" class="modal__img" alt="Captura del proyecto">
+
+            <h2 id="modal-title"></h2>
+            
+            <br>
+            <div class="modal__section">
+                <h3>Descripción</h3>
+                <p id="modal-description"></p>
+            </div>
+
+            <br>
+
+            <div class="modal__section">
+                <h3>Problema</h3>
+                <p id="modal-problem"></p>
+            </div>
+            <br>
+
+            <div class="modal__section">
+                <h3>Solución</h3>
+                <p id="modal-solution"></p>
+            </div>
+
+            <br>
+
+            <div class="modal__section">
+                <h3>Mi participación</h3>
+                <p id="modal-role"></p>
+            </div>
+
+            <br>
+
+            <div class="modal__section">
+                <h3>Tecnologías</h3>
+                <div id="modal-tech" class="modal__tech"></div>
+            </div>
+
+            <div class="modal__buttons">
+
+                <a id="modal-demo" href="#" target="_blank" class="btn btn--primary">
+                    Ver Demo
+                </a>
+
+                <a id="modal-github" href="#" target="_blank" class="btn btn--secondary">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TIMELINE -->
+
+    <section class="timeline" id="trayectoria">
+
+        <div class="timeline__container">
+
+            <h2 class="section__title">Trayectoria Profesional</h2>
+
+            <p class="timeline__subtitle">
+                Estos proyectos representan las etapas más importantes de mi formación y experiencia
+                como desarrollador de software.
+            </p>
+
+            <div class="timeline__line">
+
+                <!-- 2024 -->
+
+                <div class="timeline__item">
+
+                    <div class="timeline__dot"></div>
+
+                    <div class="timeline__content">
+
+                        <span class="timeline__year">Mayo - Agosto 2024</span>
+
+                        <h3>Sistema Empresarial ARCMEX</h3>
+
+                        <h4>Estadías TSU</h4>
+
+                        <p>
+                            Desarrollo del frontend de un sistema empresarial para la gestión de
+                            inventario, documentos, ventas y administración de usuarios.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- 2025 -->
+
+                <div class="timeline__item">
+
+                    <div class="timeline__dot"></div>
+
+                    <div class="timeline__content">
+
+                        <span class="timeline__year">Noviembre 2025</span>
+
+                        <h3>Hackatón Verilog</h3>
+
+                        <h4>Competencia de Desarrollo</h4>
+
+                        <p>
+                            Participación en un hackatón desarrollando una solución tecnológica en
+                            equipo con una placa FPGA y el lenguaje Verilog.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- 2025 -->
+
+                <div class="timeline__item">
+
+                    <div class="timeline__dot"></div>
+
+                    <div class="timeline__content">
+
+                        <span class="timeline__year">Noviembre 2025</span>
+
+                        <h3>El Paso de los Arrieros</h3>
+
+                        <h4>Proyecto Final de Carrera</h4>
+
+                        <p>
+                            Desarrollo de una Progressive Web App utilizando Angular 19,
+                            Tailwind CSS y tecnologías PWA como Service Workers,
+                            Manifest y funcionamiento offline.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- 2026 -->
+
+                <div class="timeline__item">
+
+                    <div class="timeline__dot"></div>
+
+                    <div class="timeline__content">
+
+                        <span class="timeline__year">Enero - Abril 2026</span>
+
+                        <h3>ACIDNAY</h3>
+
+                        <h4>Estadías Ingeniería</h4>
+
+                        <p>
+                            Desarrollo del frontend para una plataforma gubernamental de
+                            Firma Electrónica Avanzada del Gobierno del Estado de Nayarit,
+                            participando en el diseño UX/UI, wireframes e integración con APIs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+
+    <section class="skills" id="tecnologias">
+
+        <h2 class="section__title">Tecnologías</h2>
+
+        <p class="skills__subtitle">
+            Tecnologías y herramientas que he utilizado en proyectos académicos,
+            profesionales y personales.
+        </p>
+
+        <div class="skills__grid">
+
+
+            <div class="skill-card">
+
+                <h3><i class="fa-solid fa-display"></i> Frontend</h3>
+
+                <div class="skill-tags">
+
+                    <span><i class="devicon-html5-plain colored"></i></span>
+                    <span><i class="devicon-css3-plain colored"></i></span>
+                    <span><i class="devicon-javascript-plain colored"></i></span>
+                    <span><i class="devicon-angular-plain colored"></i></span>
+                    <span><i class="devicon-tailwindcss-original colored"></i></span>
+                    <span><i class="devicon-bootstrap-plain colored"></i> </span>
+
+                </div>
+
+            </div>
+
+            <!-- Backend -->
+
+            <div class="skill-card">
+
+                <h3><i class="fa-solid fa-display"></i> Backend</h3>
+
+                <div class="skill-tags">
+
+                    <span><i class="devicon-php-plain colored"></i> </span>
+                    <span><i class="devicon-laravel-original colored"></i> </span>
+
+                </div>
+
+            </div>
+
+            <!-- Bases de Datos -->
+
+            <div class="skill-card">
+
+                <h3><i class="fa-solid fa-database"></i> Bases de Datos</h3>
+
+                <div class="skill-tags">
+
+                    <span><i class="devicon-mysql-original colored"></i></span>
+                    <span><i class="devicon-microsoftsqlserver-plain colored"></i></span>
+
+                </div>
+
+            </div>
+
+            <!-- Herramientas -->
+
+            <div class="skill-card">
+
+                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Herramientas</h3>
+
+                <div class="skill-tags">
+
+                    <span><i class="devicon-git-plain colored"></i></span>
+                    <span><i class="devicon-github-original"></i></span>
+                    <span><i class="devicon-vscode-plain colored"></i></span>
+                    <span><i class="devicon-android-plain colored"></i></span>
+
+                </div>
+
+            </div>
+
+            <!-- Aprendiendo -->
+
+            <div class="skill-card">
+
+                <h3><i class="fa-solid fa-graduation-cap"></i> Actualmente aprendiendo</h3>
+
+                <div class="skill-tags">
+
+                    <span><i class="devicon-java-plain colored"></i> </span>
+                    <span><i class="devicon-typescript-plain colored"></i> </span>
+                    <span><i class="devicon-docker-plain colored"></i> </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer" id="contacto">
+
+        <div class="footer__container">
+
+            <!-- Información -->
+
+            <div class="footer__section">
+
+                <h2 class="footer__logo">&lt; Tristan Ruelas /&gt;</h2>
+
+                <p>
+                    Portafolio personal donde presento algunos de los proyectos que
+                    he desarrollado durante mi formación profesional, enfocados en
+                    desarrollo web, aplicaciones móviles y soluciones de software.
+                </p>
+
+            </div>
+
+            <!-- Navegación -->
+
+            <div class="footer__section">
+
+                <h3>Navegación</h3>
+
+                <ul>
+
+                    <li><a href="#inicio">Inicio</a></li>
+
+                    <li><a href="#about">Sobre mí</a></li>
+
+                    <li><a href="#tecnologias">Tecnologías</a></li>
+
+                    <li><a href="#trayectoria">Trayectoria</a></li>
+
+                    <li><a href="#proyectos">Proyectos</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contacto -->
+
+            <div class="footer__section">
+
+                <h3>Contacto</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="mailto:tic.tristanruelas@gmail.com">
+                            <i class="fa-solid fa-envelope"></i> tic.tristanruelas@gmail.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/tictristan" target="_blank">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </li>
+
+                    <li>
+                        
+                        <a href="https://linkedin.com/in/TU_USUARIO" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+
+            <p>
+                © 2026 Tristan Ruelas. Todos los derechos reservados.
+            </p>
+
+            <p>
+                Desarrollado con HTML, CSS y JavaScript.
+            </p>
+
+        </div>
+
+    </footer>
 
 </body>
 </html>
